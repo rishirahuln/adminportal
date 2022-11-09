@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SideBar from "./Sidebar";
+import "./sb-admin-2.css";
+import "./fontawesome-free/css/all.min.css";
+import Topbar from "./Topbar";
+import Dashboard from "./Dashboard";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import ListUsers from "./ListUsers";
+import CreateUser from "./CreateUser";
+import Profile from "./Profile";
+import EditProfile from "./EditProfile";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div id="wrapper">
+        <SideBar />
+        <div id="content-wrapper" className="d-flex flex-column">
+          <div id="content">
+            <Topbar />
+            <Routes>
+              <Route path="/dashboard" element={<Dashboard />}></Route>
+              <Route path="/users" element={<ListUsers />}></Route>
+              <Route path="/create-user" element={<CreateUser/>}></Route>
+              <Route path="/profile/:id" element={<Profile/>}></Route>
+              <Route path="/edit-profile/:id" element={<EditProfile/>}></Route>
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
