@@ -106,8 +106,8 @@ function EditProfile() {
                 <label>Country</label>
                 <select className="form-control" name="country" value={formik.values.country} onChange={formik.handleChange}>
                   <option>India</option>
-                  <option>USA</option>
-                  <option>China</option>
+                  <option>Germany</option>
+                  <option>Canada</option>
                 </select>
               </div>
             </div>
@@ -116,8 +116,10 @@ function EditProfile() {
                 <label>State</label>
                 <select className="form-control" name="state" value={formik.values.state} onChange={formik.handleChange}>
                   <option>Tamil Nadu</option>
-                  <option>Karnataka</option>
                   <option>Maharashtra</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Telangana</option>
                 </select>
               </div>
             </div>
@@ -126,8 +128,10 @@ function EditProfile() {
                 <label>City</label>
                 <select className="form-control" name="city" value={formik.values.city} onChange={formik.handleChange}>
                   <option>Chennai</option>
-                  <option>Bengaluru</option>
                   <option>Mumbai</option>
+                  <option>Bengaluru</option>
+                  <option>Kochin</option>
+                  <option>Hyderabad</option>
                 </select>
               </div>
             </div>
