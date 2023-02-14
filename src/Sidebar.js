@@ -14,14 +14,14 @@ function SideBar() {
           <i className="fas fa-laugh-wink"></i>
         </div>
         <div className="sidebar-brand-text mx-3">
-          Admin Portal
+          User Management System
         </div>
       </a>
 
       <hr className="sidebar-divider my-0" />
 
       <li className="nav-item active">
-        <Link to={"/dashboard"} className="nav-link">
+        <Link to={"/"} className="nav-link">
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </Link>

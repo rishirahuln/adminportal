@@ -19,7 +19,7 @@ function App() {
           <div id="content">
             <Topbar />
             <Routes>
-              <Route path="/dashboard" element={<Dashboard />}></Route>
+              <Route path="/" element={<Dashboard />}></Route>
               <Route path="/users" element={<ListUsers />}></Route>
               <Route path="/create-user" element={<CreateUser/>}></Route>
               <Route path="/profile/:id" element={<Profile/>}></Route>
